@@ -11,8 +11,8 @@
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
 
-  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -140,3 +140,88 @@
     transform: translateY(0);
   }
 }
+
+/* ---------- Illyrian Lounge Bar theme ---------- */
+:root {
+  --illy-bg: #0A0A0A;
+  --illy-bg-2: #14100C;
+  --illy-gold: #C9A84C;
+  --illy-gold-soft: #E7C97A;
+}
+
+.illy-root {
+  background: var(--illy-bg);
+  color: #fff;
+  font-family: var(--font-sans);
+}
+.illy-root h1, .illy-root h2, .illy-root h3, .illy-root h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.illy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 2rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.illy-btn-gold {
+  background: var(--illy-gold);
+  color: #0A0A0A;
+  border-color: var(--illy-gold);
+}
+.illy-btn-gold:hover {
+  background: var(--illy-gold-soft);
+  border-color: var(--illy-gold-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -12px rgba(201, 168, 76, 0.6);
+}
+.illy-btn-ghost {
+  color: #fff;
+  border-color: rgba(255,255,255,0.35);
+  background: transparent;
+}
+.illy-btn-ghost:hover {
+  border-color: var(--illy-gold);
+  color: var(--illy-gold);
+  transform: translateY(-2px);
+}
+
+.illy-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.illy-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 168, 76, 0.5);
+  box-shadow: 0 20px 50px -20px rgba(201, 168, 76, 0.25);
+}
+
+@keyframes illy-pulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(0,0,0,0.35), 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  50%      { box-shadow: 0 8px 28px rgba(0,0,0,0.4),  0 0 0 14px rgba(37, 211, 102, 0); }
+}
+.illy-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 9999px;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+  animation: illy-pulse 2.4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+.illy-whatsapp:hover { transform: scale(1.08); }
