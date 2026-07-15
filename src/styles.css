@@ -143,20 +143,24 @@
 
 /* ---------- Illyrian Lounge Bar theme ---------- */
 :root {
-  --illy-bg: #0A0A0A;
-  --illy-bg-2: #14100C;
-  --illy-gold: #C9A84C;
-  --illy-gold-soft: #E7C97A;
+  --illy-bg: #0D0D0D;          /* nero principale */
+  --illy-bg-2: #1B1B1B;        /* grigio antracite scuro */
+  --illy-bordeaux: #4A0E1F;    /* accento bordeaux */
+  --illy-wood: #3A2A1A;        /* marrone legno scuro */
+  --illy-text: #F0EDE8;        /* bianco caldo */
+  --illy-gold: #B08D57;        /* bronzo caldo per dettagli/testi accent */
+  --illy-gold-soft: #C9A66A;
 }
 
 .illy-root {
   background: var(--illy-bg);
-  color: #fff;
+  color: var(--illy-text);
   font-family: var(--font-sans);
 }
 .illy-root h1, .illy-root h2, .illy-root h3, .illy-root h4 {
   font-family: var(--font-display);
   letter-spacing: -0.01em;
+  color: var(--illy-text);
 }
 
 .illy-btn {
@@ -173,19 +177,19 @@
   cursor: pointer;
 }
 .illy-btn-gold {
-  background: var(--illy-gold);
-  color: #0A0A0A;
-  border-color: var(--illy-gold);
+  background: var(--illy-bordeaux);
+  color: var(--illy-text);
+  border-color: var(--illy-bordeaux);
 }
 .illy-btn-gold:hover {
-  background: var(--illy-gold-soft);
-  border-color: var(--illy-gold-soft);
+  background: var(--illy-wood);
+  border-color: var(--illy-gold);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px -12px rgba(201, 168, 76, 0.6);
+  box-shadow: 0 12px 30px -12px rgba(74, 14, 31, 0.7);
 }
 .illy-btn-ghost {
-  color: #fff;
-  border-color: rgba(255,255,255,0.35);
+  color: var(--illy-text);
+  border-color: rgba(240, 237, 232, 0.35);
   background: transparent;
 }
 .illy-btn-ghost:hover {
@@ -195,14 +199,14 @@
 }
 
 .illy-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--illy-bg-2);
+  border: 1px solid rgba(240, 237, 232, 0.08);
   transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 .illy-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(201, 168, 76, 0.5);
-  box-shadow: 0 20px 50px -20px rgba(201, 168, 76, 0.25);
+  border-color: var(--illy-gold);
+  box-shadow: 0 20px 50px -20px rgba(74, 14, 31, 0.55);
 }
 
 @keyframes illy-pulse {
@@ -225,3 +229,4 @@
   transition: transform 0.3s ease;
 }
 .illy-whatsapp:hover { transform: scale(1.08); }
+

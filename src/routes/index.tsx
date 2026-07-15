@@ -1,8 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import heroInterior from "@/assets/illyrian-interior.jpg";
-import exteriorImg from "@/assets/illyrian-exterior.jpg";
-import outdoorImg from "@/assets/illyrian-outdoor.jpg";
+import heroInteriorAsset from "@/assets/illyrian-interior-real.jpg.asset.json";
+import exteriorAsset from "@/assets/illyrian-exterior-real.jpg.asset.json";
+import outdoorAsset from "@/assets/illyrian-outdoor-real.jpg.asset.json";
+
+const heroInterior = heroInteriorAsset.url;
+const exteriorImg = exteriorAsset.url;
+const outdoorImg = outdoorAsset.url;
 
 export const Route = createFileRoute("/")({
   component: Home,

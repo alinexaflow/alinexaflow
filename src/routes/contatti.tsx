@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import outdoorImg from "@/assets/illyrian-outdoor.jpg";
+import outdoorAsset from "@/assets/illyrian-outdoor-real.jpg.asset.json";
+const outdoorImg = outdoorAsset.url;
 
 export const Route = createFileRoute("/contatti")({
   component: ContattiPage,
