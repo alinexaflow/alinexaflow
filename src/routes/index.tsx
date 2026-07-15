@@ -81,11 +81,11 @@ function Home() {
               Chi siamo
             </div>
             <h2 className="font-display text-white text-3xl md:text-5xl leading-tight">
-              Il volto di Illyrian: <span className="italic text-[color:var(--illy-gold)]">Patrick</span>
+              Il volto di Illyrian: <span className="italic text-[color:var(--illy-gold)]">Petrit</span>
             </h2>
             <div className="mt-8 space-y-5 text-white/75 text-base md:text-lg leading-relaxed">
               <p>
-                Ciao, sono <strong className="text-white">Patrick</strong>, il volto di Illyrian Lounge Bar.
+                Ciao, sono <strong className="text-white">Petrit</strong>, il volto di Illyrian Lounge Bar.
                 Da sempre appassionato di ospitalità, ho creato questo spazio nel cuore del parco di Rovato
                 per offrire un'esperienza autentica.
               </p>
